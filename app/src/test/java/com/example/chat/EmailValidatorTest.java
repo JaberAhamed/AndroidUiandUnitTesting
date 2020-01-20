@@ -35,11 +35,16 @@ public class EmailValidatorTest {
     }
     @Test
     public void emailValidator_EmptyString_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail(""));
+        assertFalse(EmailValidator.isValidEmail(" "));
     }
 
     @Test
     public void emailValidator_NullEmail_ReturnsFalse() {
         assertFalse(EmailValidator.isValidEmail(null));
+    }
+
+    @Test
+    public void emailValidator_textEmail_ReturnsFalse() {
+        assertFalse(EmailValidator.isValidEmail("dfd dfdfdfd dfd"));
     }
 }
