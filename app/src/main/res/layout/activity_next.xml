@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,24 +13,28 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Settings"
+            android:id="@+id/text_second"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:text="Your Name"
+
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
         <EditText
             android:id="@+id/userNameInput"
             android:hint="Hasan"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+
             android:text="Select Date"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -38,6 +42,7 @@
             android:id="@+id/dateOfBirthInput"
             android:inputType="text|date"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:datePickerMode="spinner"
             android:calendarViewShown="false"
@@ -47,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:text="Email"
+
             android:layout_marginTop="@dimen/activity_vertical_margin_small"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
         <EditText
@@ -60,6 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/activity_vertical_margin">
             <Button
@@ -84,4 +91,4 @@
                 tools:ignore="OnClick" />
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

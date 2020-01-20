@@ -12,6 +12,13 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        int vlaue=0 ;
+
+        for(int i =0;i<5;i++){
+
+            vlaue=i+i;
+            i++;
+        }
+        assertEquals(7,vlaue);
     }
 }

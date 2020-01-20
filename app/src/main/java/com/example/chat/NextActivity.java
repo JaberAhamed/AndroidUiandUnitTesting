@@ -69,7 +69,7 @@ public class NextActivity extends AppCompatActivity {
             Toast.makeText(this, "Personal information saved", Toast.LENGTH_LONG).show();
 
         } else {
-            Toast.makeText(this, "Personal information saved", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Personal information NOT saved", Toast.LENGTH_LONG).show();
         }
 
 
