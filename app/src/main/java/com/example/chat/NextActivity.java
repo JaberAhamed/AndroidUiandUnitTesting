@@ -2,12 +2,14 @@ package com.example.chat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -20,11 +22,21 @@ public class NextActivity extends AppCompatActivity {
     DatePicker datePicker;
     SharedPreferencesHelper preferencesHelper;
     EmailValidator emailValidator;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
 
+
+
+        textView = findViewById(R.id.text_second);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),CheckActivity.class));
+            }
+        });
         userName = findViewById(R.id.userNameInput);
         userEmail = findViewById(R.id.emailInput);
         datePicker = findViewById(R.id.dateOfBirthInput);
@@ -33,6 +45,8 @@ public class NextActivity extends AppCompatActivity {
         userEmail.addTextChangedListener(emailValidator);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
 
         preferencesHelper=new SharedPreferencesHelper(sharedPreferences);
 
